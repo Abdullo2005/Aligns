@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align</title>
+    <link rel="stylesheet" href="bootstrap-5.2.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="hover.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- MENU SECTION -->
+    <div class="menu">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg  " style="background-color: #153C3C; color: aliceblue;">
+                <div class="container-fluid">
+                   <img style="color: #153C3C ;" src="data:image/png;base64,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" alt="" width="150px">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="color:white ;">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Overview</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pages</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Template
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                            <button class="btn btn-outline-success" type="submit">Buy Align</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+         <div class="div">
+            <h5 class="text-center pt-5">ALIGN UI KIT FOR WEBFLOW</h5>
+<h1 class="text-center pt-5">Teams build better</h1>
+<h1 class="text-center">products with</h1>
+<h1 class="text-center font-Roboto">Align UI</h1>
+<img src="photo_2022-09-17_10-56-58.jpg" class="img-fluid text-center pt-5 " alt="..." style="padding-right:50px ;">
+
+         </div>
+        
+        </div>
+    </div>
+    <!-- SECOND BODY -->
+<div class="second_body">
+    <div class="container">
+<h5 class="text-center" style="margin-top:100px ;">LANDING PAGES</h5>
+<div class="discover">
+    <h1 class=" discover text-center">Discover all the pages.</h1>
+   
+    <h1  class=" text-center"> that you can use</h1>
+    <h1 class=" text-center">over and over again</h1>
+</div>
+<div class="row " style="margin-top:100px;">
+    <div  class="col  col-12 col-sm-12 col-md-6 col-lg-6 pe-">
+       <h5 class="pb-5 pb-sm-2">Landing One</h5> 
+       <img src="Landing page 1.jpg" alt="">
+    </div>
+    <div class="col col-12 col-sm-12 col-md-6 col-lg-6">
+        <h5 class="pb-5 pt-sm-4 pb-sm-2">Landing Two</h5>
+        <img src="Landing page 2.jpg" alt="">
+    </div>
+</div>
+<div class="row">
+    <div class="col col-12 col-sm-12 col-md-6 col-lg-6">
+        <h5 class="pb-5 pt-5 pb-sm-2">Landing Three</h5>
+        <img src="Landing page 3.jpg" alt="">
+    </div>
+</div>
+    </div>
+</div>
+<!-- INTRODUCTION BODY -->
+<div class="container">
+    <h5 class="text-center" style="margin-top:100px ;">COMPANY</h5>
+    <h1 class="text-center pt-2">Company Pages</h1>
+    <div class="row " style="margin-top:100px;">
+        <div  class="col  col-12 col-sm-12 col-md-6 col-lg-6">
+       <div class="rang">
+        <h5 class="pb-5 pb-sm-2"> About One</h5>
+        <img src="About one.jpg" alt="">
+       </div>
+        </div>
+        <div class="col col-12 col-sm-12 col-md-6 col-lg-6">
+            <h5 class="pb-5 pb-sm-2"> About Two</h5>
+            <img src="About Two.jpg" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-6 col-lg-6">
+            <h5 class="pb-5 pt-5 pb-sm-2"> About Three</h5>
+            <img src="About Three.jpg" alt="">
+        </div>
+        <div class="col col-12 col-sm-12 col-md-6 col-lg-6">
+            <h5 class="pb-5 pt-5 pb-sm-2">Contact one </h5>
+            <img src="Contact one.jpg" alt="">
+        </div>
+    </div>
+    <div class="row " style="margin-top:150px;">
+        <div  class="col  col-12 col-sm-12 col-md-6 col-lg-6">
+       <div class="rang">
+        <h5 class="pb-5 pb-sm-2">Contact Two</h5>
+        <img src="Contact two.jpg" alt="">
+       </div>
+        </div>
+        <div class="col col-12 col-sm-12 col-md-6 col-lg-6">
+            <h5 class="pb-5 pb-sm-2">Contact Three</h5>
+            <img src="Contact three.jpg" alt="">
+        </div>
+    </div>
+</div>
+<!-- BLOG -->
+<div class="container">
+    <h5 class="text-center" style="margin-top:150px ;">Blog</h5>
+    <h1 class="text-center pt-2">CMS Pages</h1>
+    <div class="row " style="margin-top:150px;">
+        <div  class="col  col-12 col-sm-12 col-md-6 col-lg-6">
+       <div class="rang">
+        <h5 class="pb-5"> Blog one</h5>
+        <img src="Blog one.jpg" alt="">
+       </div>
+        </div>
+        <div class="col col-12 col-sm-12 col-md-6 col-lg-6">
+            <h5 class="pb-5 pt-sm-"> Blog Two</h5>
+            <img src="Blog two.jpg" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-6 col-lg-6">
+            <h5 class="pb-5 pt-5"> Blog Article (CMS)</h5>
+            <img src="Blog Article.jpg" alt="">
+        </div>
+        <div class="col col-12 col-sm-12 col-md-6 col-lg-6">
+            <h5 class="pb-5 pt-5">Customer Stories</h5>
+            <img src="Costomer stories.jpg" alt="">
+        </div>
+    </div>
+    <div class="row " style="margin-top:150px;">
+        <div  class="col  col-12 col-sm-12 col-md-6 col-lg-6">
+       <div class="rang">
+        <h5 class="pb-5">Customer Stories Article (CMS)</h5>
+        <img src="Costomer cms.jpg" alt="">
+       </div>
+        </div>
+        <div class="col col-12 col-sm-12 col-md-6 col-lg-6">
+            <h5 class="pb-5 pt-sm-">Team Member (CMS)</h5>
+            <img src="Team cms.jpg" alt="">
+        </div>
+    </div>
+</div>
+<!-- PRICING -->
+<div class="container">
+    <h5 class="text-center" style="margin-top:150px ;">PRICING</h5>
+    <h1 class="text-center pt-2">Pricing Pages</h1>
+    <div class="row " style="margin-top:100px;">
+        <div  class="col  col-12 col-sm-12 col-md-6 col-lg-6">
+       <div class="rang">
+        <h5 class="pb-5 pb-sm-2"> Pricing one</h5>
+        <img src="Pricing one.jpg" alt="">
+       </div>
+        </div>
+        <div class="col col-12 col-sm-12 col-md-6 col-lg-6">
+            <h5 class="pb-5 pb-sm-2">Pricing Two</h5>
+            <img src="Pricing two.jpg" alt="">
+        </div>
+    </div>
+</div>
+<!-- OTHER PAGES -->
+<div class="container ">
+<h5 class="text-center" style="margin-top:100px ;">Other</h5>
+<h1 class="text-center pt-2">Additional Pages</h1>
+<div class="row pt-5">
+    <div class="col  col-12 col-sm-12 col-md-6 col-lg-6"><h5 class="bg-secondary ms-5 mt-3 p-4"> UI Cards <i class="fa-solid fa-arrow-right" style="margin-left: 350px;"></i></h5></div>
+    <div class="col   col-12 col-sm-12 col-md-6 col-lg-6"><h5 class=" bg-secondary ms-5 mt-3 p-4 ">Login <i class="fa-solid fa-arrow-right" style="margin-left: 450px;"></i></h5></div>
+</div>
+<div class="row">
+    <div class="col  col-12 col-sm-12 col-md-6 col-lg-6"><h5 class="bg-secondary ms-5 mt-3 p-4"> Register <i class="fa-solid fa-arrow-right" style="margin-left: 350px;"></i></h5></div>
+    <div class="col   col-12 col-sm-12 col-md-6 col-lg-6"><h5 class="bg-secondary ms-5 mt-3 p-4">Forgot Password <i class="fa-solid fa-arrow-right" style="margin-left: 300px;"></i></h5></div>
+</div>
+<div class="row">
+    <div class="col  col-12 col-sm-12 col-md-6 col-lg-6"><h5 class="bg-secondary ms-5 mt-3 p-4">404 Error <i class="fa-solid fa-arrow-right" style="margin-left: 350px;"></i></h5></div>
+    <div class="col  col-12 col-sm-12 col-md-6 col-lg-6"><h5 class="bg-secondary ms-5 mt-3 p-4">Style Guide <i class="fa-solid fa-arrow-right" style="margin-left: 350px;"></i></h5></div>
+</div>
+<div class="row">
+    <div class="col  col-12 col-sm-12 col-md-6 col-lg-6"><h5 class="bg-secondary ms-5 mt-3 p-4">Changelog <i class="fa-solid fa-arrow-right" style="margin-left: 350px;"></i></h5></div>
+    <div class="col   col-12 col-sm-12 col-md-6 col-lg-6"><h5 class="bg-secondary ms-5 mt-3 p-4">Licence <i class="fa-solid fa-arrow-right" style="margin-left: 400px;"></i></h5></div>
+</div>
+</div>
+<!-- PURCHASE -->
+<div class="container container-fluid p-5 " style="margin-top:100px; background:#153C3C ; color: white;">
+    <h1 class="">Align is the stress-free</h1>
+    <h1> way to build your website</h1>
+    <div class="head d-flex gap-5 pt-5">
+        <div class="money">
+            <h1>$79</h1>
+        </div>
+        <div class="buil">
+            <p>Build a better website</p>
+            <p>faster today.</p>
+        </div>
+        <div class="p_bottom">
+            <button class="bg-secondary pe-5 pb-2 w-100 text-center align-items-center  border-secondary" style="border-radius:10px ;"><h6 class="text-center " style="padding-left: 40px; margin-top:15px ;">Purchase</h6></button>
+        </div>
+    </div>
+</div>
+<section style="background-color:#153C3C ;">
+<div class="container pt-5" style="margin-top: 200px; background-color:#153C3C  ; color: white;">
+    <div class="row">
+       <div class="col col-12 col-sm-12 col-md-6 col-lg-6">
+        <h1>Build a beautiful</h1>
+        <h1>product withAlign</h1>
+<p>Align contains all the pages and sections needed to create beautiful digital products with ease.</p>
+       </div>
+<div class="col col-12 col-sm-12 col-md-6 col-lg-6 d-flex">
+    <div class="col mb-3">
+        <h5>Overview</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Overview</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home 1</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home 2</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home 3</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing 1</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing 2</a></li>
+        </ul>
+      </div>
+  
+      <div class="col mb-3">
+        <h5>Pages</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About 1</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About 2</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About 3</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Blog 1</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Blog 2</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Blog Post</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Team members</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">404</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Password</a></li>
+        </ul>
+      </div>
+  
+      <div class="col mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact 1</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact 2</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact 3</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Customer Stories</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a>Customer Story</li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Login</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Register</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Style Guide</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Changelog</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Licence</a></li>
+        </ul>
+      </div>
+
+
+</div>
+    </div>
+    <div class=" d-flex justify-content-between">
+       <div class=""> <h6>Align |@ Template by <span class="text-muted">Flowbase</span> Powered by <span class="text-muted">Webflow</span>  </h6></div>
+        <div class=" d-flex gap-5">
+            <p>Overview</p>
+            <p>Pages</p>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="bootstrap-5.2.0-dist/js/bootstrap.js"></script>
+</body>
+
+</html>
